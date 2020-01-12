@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.innerContainer{
+    display: flex;
+    flex-direction: row;
+
+}
+
+.list-pic{
+    height: 100px;
+    width: 150px
+}
+
+.topbar{
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+    align-content: center;
+}
+
+.picture{
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+.list{
+    border: solid #ddd;
+    border-width: 0 1px 1px 1px;
+}
+
+.showPic{
+    height:500px;
+    width: auto
+}
+
+button{
+    height: 20px;
+    width:111px;
+    background-color: lightblue;
+}

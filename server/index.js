@@ -1,9 +1,28 @@
+// Initialize the server
 const express = require('express')
 const app = express()
 const port = 3000
 
-app.use(express.static('./client/dist'))
+//get other files from places
+const routes = require('./routes.js')
+const db = require('./db initialize/initializeCon');
 
-app.get('/', (req, res) => res.send('Hello World!'))
+//upload the modules
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const morgan = require('morgan');
 
+//use the middleware/serve the client files
+app.use(cors());
+app.use(morgan('dev'));
+app.use(bodyParser.json());
+app.use('/', routes);
+app.use(express.static('./client'));
+
+
+//routing logic
+
+
+
+//open up the gates! on port 3000 tho
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
