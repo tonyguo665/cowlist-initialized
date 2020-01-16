@@ -14,6 +14,7 @@ useEffect(() =>{
   axios.get('http://localhost:3000/cows')
   .then((datas) =>{
     setCowList(datas.data);
+    //setCurrentCow(cowList[0]);
   })
 },[])
 
